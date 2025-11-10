@@ -1,5 +1,5 @@
 name: "Label Creator"
-description: "Automatically Create or Update Labels to ensure they exist and are synchronized using a centralized configuration file."
+description: "Automatically Create or Update Labels to ensure they exist and are synchronized using a centralized configuration file." # yamllint disable-line rule:line-length
 author: "Shane"
 branding:
   icon: "tag"
@@ -13,8 +13,12 @@ inputs:
   url:
     description: "Configuration file URL"
     required: false
+  data:
+    description: "Configuration JSON/YAML string"
+    required: false
   json:
-    description: "Configuration JSON string"
+    deprecationMessage: "This input has changed too: data"
+    description: "Configuration JSON/YAML string"
     required: false
   delete:
     description: "Delete labels not in config"
